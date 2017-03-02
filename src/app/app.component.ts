@@ -4,6 +4,13 @@ import { Component } from '@angular/core';
   selector: 'my-app',
   template: `
     <h1>{{name}}</h1>
+
+    <input [(ngModel)]="name" />
+    <label>
+      Hide Address:
+      <input [(ngModel)]="hideAddress" type="checkbox" />
+    </label>
+
     <div [hidden]="hideAddress">
       <fieldset>
         <label>Street: </label>{{street}}
