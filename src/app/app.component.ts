@@ -4,9 +4,9 @@ import { Customer } from './customer.model';
 @Component({
   selector: 'my-app',
   template: `
-    <h1>{{name}}</h1>
+    <h1>{{customer.name}}</h1>
 
-    <input [(ngModel)]="name" />
+    <input [(ngModel)]="customer.name" />
     <label>
       Hide Address:
       <input [(ngModel)]="hideAddress" type="checkbox" />
@@ -14,7 +14,7 @@ import { Customer } from './customer.model';
 
     <div [hidden]="hideAddress">
       <fieldset>
-        <label>Street: <input [(ngModel)]="street" /></label>
+        <label>Street: <input [(ngModel)]="customer.address.street" /></label>
       </fieldset>
       <fieldset>
         <label>City: </label>{{city}}
@@ -32,14 +32,17 @@ import { Customer } from './customer.model';
   `,
 })
 export class AppComponent {
-  name = 'Tom Bombadil';
-  city = 'Anytown';
-  street = '123 Main St';
-  region = 'east';
-  hideAddress = false;
 
-  public changeAddress() {
+  public customer: Customer = {
+    id: 1,
+    name: 'Tom Bombadil',
+    address: {
+      city: 'Anytown',
+      street: '123 Main St',
+      state: 'VA',
+      region: 'east'
+    }
+  };
 
-  }
-
+  public hideAddress = false;
 }
