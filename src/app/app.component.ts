@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
 
     <div [hidden]="hideAddress">
       <fieldset>
-        <label>Street: </label>{{street}}
+        <label>Street: <input [(ngModel)]="street" /></label>
       </fieldset>
       <fieldset>
         <label>City: </label>{{city}}
