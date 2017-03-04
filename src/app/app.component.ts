@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { Customer } from './customer.model';
 
 @Component({
@@ -8,6 +9,10 @@ import { Customer } from './customer.model';
   styleUrls: ['app.component.css']
 })
 export class AppComponent {
+  public regions = ['east', 'west', 'north', 'south', 'narnia', 'istanbul'];
+  public customers: Customer[] = [
+
+  ];
 
   public customer: Customer = {
     id: 1,

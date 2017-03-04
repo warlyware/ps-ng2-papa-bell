@@ -8,18 +8,15 @@
 
 <div [hidden]="hideAddress">
     <fieldset>
-    <label>Street: <input [(ngModel)]="customer.address.street" /></label>
+        <label>Street: <input [(ngModel)]="customer.address.street" /></label>
     </fieldset>
     <fieldset>
-    <label>City: </label>{{city}}
+        <label>City: </label>{{city}}
     </fieldset>
     <fieldset>
-    <label [style.color]="color">Region</label>
-    <select (change)="changeRegion($event.target.value)">
-        <option>north</option>
-        <option>south</option>
-        <option>east</option>
-        <option>west</option>
-    </select>
+        <label [style.color]="color">Region</label>
+        <select [(ngModel)]="customer.address.region">
+            <option *ngFor="let region of regions">{{region}}</option>
+        </select>
     </fieldset>
 </div>
