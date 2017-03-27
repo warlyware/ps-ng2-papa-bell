@@ -4,11 +4,12 @@ html, body {
     height: 100%;
     margin: 0px;
     padding: 0px;
+    overflow: hidden;
 }
 
 my-app {
     position: relative;
-    top: 6em;
+    top: 2em;
     left: 2em;
 }
 

@@ -1,6 +1,8 @@
 <h1>Customers</h1>
 <ul>
-    <li *ngFor="let customer of customers" (click)="currentCustomer = customer">{{customer.name}}</li>
+    <li *ngFor="let customer of customers"
+    [ngClass]="{'selected': currentCustomer === customer}"
+    (click)="currentCustomer = customer">{{customer.name}}</li>
 </ul>
 
 <h1>{{currentCustomer.name}}</h1>
