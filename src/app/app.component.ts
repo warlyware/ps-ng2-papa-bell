@@ -52,7 +52,6 @@ export class AppComponent {
             }
         },
     ];
-    public currentCustomer: Customer = this.customers[0];
 
     public hideAddress = false;
 }

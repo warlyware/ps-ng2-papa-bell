@@ -2,3 +2,8 @@ h1 {
     color: darkcyan;
 }
 
+.selected {
+    color: darkcyan;
+    font-weight: bold;
+}
+
