@@ -1,0 +1,15 @@
+<h1>{{currentCustomer.name}}</h1>
+<p>
+    {{currentCustomer.name}} is at {{currentCustomer.address.street}} in {{currentCustomer.address.city}}, {{currentCustomer.address.state}}
+    in the {{currentCustomer.address.region}} region.
+</p>
+
+<input [(ngModel)]="currentCustomer.name" />
+<label>
+    Show Address:
+    <input [(ngModel)]="showAddress" type="checkbox" />
+</label>
+
+<div *ngIf="showAddress">
+    <address [address]="currentCustomer.address"></address>
+</div>
