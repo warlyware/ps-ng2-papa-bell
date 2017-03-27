@@ -9,21 +9,50 @@ import { Customer } from './customer.model';
     styleUrls: ['app.component.css']
 })
 export class AppComponent {
-    public regions = ['east', 'west', 'north', 'south', 'narnia', 'istanbul'];
-    public customers: Customer[] = [
-
+    public regions = ['East', 'West', 'North', 'South', 'Narnia', 'Istanbul'];
+    customers: Customer[] = [
+        {
+            id: 1,
+            name: 'Alex Smith',
+            address: {
+                street: '123 Main Street',
+                city: 'Anytown',
+                state: 'California',
+                region: 'West'
+            }
+        },
+        {
+            id: 2,
+            name: 'Pierre Pasmal',
+            address: {
+                street: '456 Rue de Main',
+                city: 'Quebec City',
+                state: 'Quebec',
+                region: 'East'
+            }
+        },
+        {
+            id: 3,
+            name: 'Margarita Nadie',
+            address: {
+                street: '789 Calle Principal',
+                city: 'Guadalajara',
+                state: 'Jalisco',
+                region: 'South'
+            }
+        },
+        {
+            id: 4,
+            name: 'Katie O\'Leary',
+            address: {
+                street: '137 DeKoven Street',
+                city: 'Chicago',
+                state: 'Illinois',
+                region: 'Midwest'
+            }
+        },
     ];
-
-    public customer: Customer = {
-        id: 1,
-        name: 'Tom Bombadil',
-        address: {
-            city: 'Anytown',
-            street: '123 Main St',
-            state: 'VA',
-            region: 'east'
-        }
-    };
+    public currentCustomer: Customer = this.customers[0];
 
     public hideAddress = false;
 }
