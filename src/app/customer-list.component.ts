@@ -54,4 +54,10 @@ export class CustomerListComponent {
     ];
 
     public currentCustomer: Customer;
+
+    public shift(increment: number) {
+        let index = this.customers.findIndex(customer => customer === this.currentCustomer) + increment;
+        index = Math.min(this.customers.length - 1, Math.max(0, index));
+        this.currentCustomer = this.customers[index];
+    }
 }

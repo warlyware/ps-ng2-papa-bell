@@ -8,5 +8,5 @@
 </div>
 
 <div *ngIf="currentCustomer">
-    <customer-detail [currentCustomer]="currentCustomer"></customer-detail>
+    <customer-detail [currentCustomer]="currentCustomer" (shift)="shift($event)"></customer-detail>
 </div>

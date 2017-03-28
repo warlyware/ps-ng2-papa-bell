@@ -1,4 +1,8 @@
-<h1>{{currentCustomer.name}}</h1>
+<h1>
+    <button (click)="goLeft()"> < </button>
+    {{currentCustomer.name}}
+    <button (click)="goRight()"> > </button>
+</h1>
 <p>
     {{currentCustomer.name}} is at {{currentCustomer.address.street}} in {{currentCustomer.address.city}}, {{currentCustomer.address.state}}
     in the {{currentCustomer.address.region}} region.
